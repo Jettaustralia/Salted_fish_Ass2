@@ -1,0 +1,117 @@
+{
+    "swagger": "2.0",
+    "basePath": "/",
+    "paths": {
+        "/login": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Successful"
+                    }
+                },
+                "description": "Generates a authentication token",
+                "operationId": "post_login",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "type": "string",
+                        "required": true,
+                        "description": "Please input your username"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "type": "string",
+                        "required": true,
+                        "description": "Please input your password"
+                    }
+                ],
+                "tags": [
+                    "Movie_bot"
+                ]
+            }
+        },
+        "/main/{session_id}/{user_input}": {
+            "parameters": [
+                {
+                    "in": "path",
+                    "description": "what the user input to the server",
+                    "name": "user_input",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "in": "path",
+                    "description": "use for the contex of the dialog",
+                    "name": "session_id",
+                    "required": true,
+                    "type": "integer"
+                }
+            ],
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Successful"
+                    }
+                },
+                "description": "Chat with bot",
+                "operationId": "post_movie_bot",
+                "tags": [
+                    "Movie_bot"
+                ]
+            }
+        },
+        "/view": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "description": "View the API usage of users",
+                "operationId": "get_view_user",
+                "tags": [
+                    "Movie_bot"
+                ]
+            }
+        }
+    },
+    "info": {
+        "title": "Movie Dataset",
+        "version": "1.0",
+        "description": "This is an introduction of service"
+    },
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "securityDefinitions": {
+        "API-KEY": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "AUTH_TOKEN"
+        }
+    },
+    "security": [
+        {
+            "API-KEY": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "Movie_bot",
+            "description": "Default namespace"
+        }
+    ],
+    "responses": {
+        "ParseError": {
+            "description": "When a mask can't be parsed"
+        },
+        "MaskError": {
+            "description": "When any error occurs on mask"
+        }
+    }
+}
