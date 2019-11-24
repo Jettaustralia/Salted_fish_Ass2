@@ -24,3 +24,5 @@ python movie_bot.py
 4.Open ([http://127.0.0.1:5000](http://127.0.0.1:5000)) in your browser.
 
 5.You're done and chat with our course chatbot via browser.
+
+![Main_page](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
