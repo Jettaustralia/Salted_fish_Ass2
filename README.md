@@ -1,6 +1,6 @@
 # Salted_fish_Ass2
 ## Moviebot
-a course helper chatbot for students and staff
+a movie helper chatbot for users
 
 ### Requirements
 ```
