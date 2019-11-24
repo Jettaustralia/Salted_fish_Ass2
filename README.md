@@ -25,4 +25,4 @@ python movie_bot.py
 
 5.You're done and chat with our course chatbot via browser.
 
-![Main_page](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
+![Main_page](https://github.com/Jettaustralia/Salted_fish_Ass2/blob/master/WechatIMG235.png)
